@@ -11,21 +11,21 @@ export default function Home() {
       "args": [
         "mcp-remote",
         "-y",
-        "http://localhost:3000/api/sse"
+        "https://ab-mcp.vercel.app/api/sse"
       ]
     }
   }
 }`;
     
     navigator.clipboard.writeText(config).then(() => {
-      alert('✅ MCP configuration copied to clipboard!\n\nAdd this to your ~/.cursor/mcp.json file to integrate AB MCP Server with Cursor.');
+      alert('✅ AB MCP Server configuration copied to clipboard!\n\n📁 Next steps:\n1. Open ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 You now have access to 9 powerful MCP tools including AI agent, code review, Python execution, and web scraping!');
     }).catch(() => {
-      alert('❌ Copy failed. Please manually copy the MCP configuration:\n\n' + config + '\n\nAdd this to your ~/.cursor/mcp.json file.');
+      alert('❌ Copy failed. Please manually copy this MCP configuration:\n\n' + config + '\n\n📁 Add this to your ~/.cursor/mcp.json file to enable AB MCP Server integration.');
     });
   };
 
   const handleViewGitHub = () => {
-    window.open('https://github.com/vercel/mcp-adapter', '_blank');
+    window.open('https://github.com/aditi711/ab-mcp-server', '_blank');
   };
 
   return (
@@ -164,15 +164,15 @@ export default function Home() {
                 position: 'absolute',
                 top: '0.75rem',
                 right: '0.75rem',
-                background: 'rgba(52, 211, 153, 0.2)',
-                color: '#10B981',
+                background: 'rgba(34, 197, 94, 0.2)',
+                color: '#22C55E',
                 padding: '0.25rem 0.5rem',
                 borderRadius: '12px',
                 fontSize: '0.75rem',
                 fontWeight: '600',
-                border: '1px solid rgba(52, 211, 153, 0.3)'
+                border: '1px solid rgba(34, 197, 94, 0.3)'
               }}>
-                Coming Soon
+                Available
               </div>
               <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🤖</div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', fontWeight: '600' }}>Kotlin Code Review</h3>
@@ -192,7 +192,7 @@ export default function Home() {
           justifyContent: 'center',
           gap: '0.5rem'
         }}>
-          {['TypeScript', 'Next.js 15', 'Python', 'OpenAI', 'Firecrawl', 'Swift', 'Kotlin', 'MCP Protocol'].map(tech => (
+          {['TypeScript', 'Next.js 14', 'Python', 'OpenAI', 'Firecrawl', 'Swift', 'Kotlin', 'MCP Protocol'].map(tech => (
             <span key={tech} style={{
               background: 'rgba(255, 255, 255, 0.15)',
               color: 'white',
@@ -227,6 +227,18 @@ export default function Home() {
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
             }}
+            onMouseEnter={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.background = 'rgba(255, 255, 255, 1)';
+              target.style.transform = 'translateY(-1px)';
+              target.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.background = 'rgba(255, 255, 255, 0.9)';
+              target.style.transform = 'translateY(0px)';
+              target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            }}
           >
             🔌 Add to Cursor
           </button>
@@ -243,8 +255,20 @@ export default function Home() {
               cursor: 'pointer',
               transition: 'all 0.3s ease'
             }}
+            onMouseEnter={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.background = 'rgba(255, 255, 255, 0.1)';
+              target.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+              target.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.background = 'transparent';
+              target.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+              target.style.transform = 'translateY(0px)';
+            }}
           >
-            📚 View on GitHub
+            📂 View Source Code
           </button>
         </div>
 
