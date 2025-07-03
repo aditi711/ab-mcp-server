@@ -1,6 +1,22 @@
-# AB MCP Server
+# 🔬 AB MCP Server
 
-A comprehensive Model Context Protocol (MCP) server built with [@vercel/mcp-adapter](https://github.com/vercel/mcp-adapter) providing advanced development utilities including AI agent assistance, Swift/Kotlin code review, Python integration, web scraping, and research capabilities.
+A **comprehensive Model Context Protocol (MCP) server** built with [@vercel/mcp-adapter](https://github.com/vercel/mcp-adapter) providing **advanced development utilities** including AI agent assistance, Swift/Kotlin code review, Python integration, web scraping, and research capabilities.
+
+**Live Demo**: [https://ab-mcp.vercel.app](https://ab-mcp.vercel.app)
+
+## 🎯 **What is AB MCP Server?**
+
+AB MCP Server is a **production-ready MCP server** that provides **9 powerful development tools** through a standardized interface. Whether you're working in **Cursor**, **Claude Desktop**, or **Windsurf**, AB MCP Server seamlessly integrates advanced AI capabilities directly into your development workflow.
+
+### **🚀 Key Highlights**
+
+- **🤖 AI Agent**: OpenAI GPT-powered assistant with intelligent auto-detection
+- **📱 Swift Code Review**: Comprehensive iOS development analysis with Clean Architecture principles
+- **🤖 Kotlin Code Review**: Complete Android development review with MVVM patterns  
+- **🐍 Python Integration**: Seamless TypeScript-to-Python execution with data science libraries
+- **🌐 Web Scraping Suite**: Advanced web scraping with Firecrawl API (3 tools)
+- **🔍 Research Assistant**: Intelligent Swift/Kotlin documentation research
+- **ℹ️ Server Monitoring**: Real-time server status and tool availability
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -42,91 +58,138 @@ A comprehensive Model Context Protocol (MCP) server built with [@vercel/mcp-adap
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Features
+## ✨ **Core Features**
 
 ### 🤖 **AI Agent Assistant**
-- OpenAI GPT-powered intelligent assistant
-- Available through MCP protocol and web interface
-- Custom system prompts and model selection
-- Real-time chat interface at `http://localhost:3000`
+
+The **OpenAI GPT-powered agent** provides intelligent assistance with **auto-detection** capabilities and seamless integration across development workflows.
+
+#### **🧠 Key Features**
+
+- **Intelligent Auto-Detection**: Automatically suggests relevant tools based on user queries
+- **Multi-Model Support**: GPT-4o, GPT-4, GPT-3.5 Turbo with model selection
+- **Web Interface**: Real-time chat interface with conversation management
+- **MCP Integration**: Seamless integration with Cursor, Claude Desktop, Windsurf
 
 ### 📱 **Swift iOS Code Review**
-- Comprehensive Swift code analysis with best practices
-- Memory management and retain cycle detection
-- SwiftUI and UIKit pattern analysis
-- Clean Code and Clean Architecture principles
-- SOLID principles validation
 
-### 🤖 **Kotlin Android Code Review** *(Coming Soon)*
-- Complete Kotlin/Android code review capabilities
-- Clean Architecture and MVVM pattern analysis
-- Coroutines and lifecycle management best practices
-- SOLID principles and dependency injection patterns
-- Modern Android development guidelines
+**Comprehensive iOS development analysis** with industry best practices, Clean Architecture principles, and SOLID design patterns.
+
+#### **🔍 Review Capabilities**
+
+- **Memory Management**: Force unwrapping detection, retain cycle analysis, weak/strong patterns
+- **Threading Safety**: DispatchQueue usage, async/await patterns, main thread validation
+- **SwiftUI/UIKit**: Modern pattern detection, deprecated API warnings
+- **Performance**: String operations, collection efficiency, algorithmic improvements
+- **Security**: Keychain vs UserDefaults, HTTPS enforcement, data protection
+- **Architecture**: MVVM patterns, Repository design, Dependency Injection
+- **Clean Code**: Function length, meaningful naming, documentation standards
+- **SOLID Principles**: Single Responsibility, Open/Closed, Liskov Substitution
+
+### 🤖 **Kotlin Android Code Review**
+
+**Complete Android development review** with Clean Architecture, MVVM patterns, and modern Kotlin best practices.
+
+#### **🔍 Review Capabilities**
+
+- **Null Safety**: Proper nullable handling, safe calls, elvis operator usage
+- **Coroutines**: Structured concurrency, proper dispatchers, Flow patterns
+- **Android Lifecycle**: Activity/Fragment patterns, ViewBinding vs findViewById
+- **Architecture**: MVVM implementation, Repository pattern, Hilt/Dagger DI
+- **Data Classes**: Proper usage vs regular classes, immutability patterns
+- **Performance**: Memory leak detection, GlobalScope avoidance, efficiency
+- **Clean Code**: Function composition, meaningful names, magic number elimination
+- **SOLID Principles**: Applied to Android/Kotlin development context
 
 ### 🐍 **Python Integration**
-- Seamless TypeScript-to-Python execution
-- Built-in data science packages (pandas, numpy, matplotlib, seaborn)
-- Dynamic package installation capabilities
-- Return type support (text, json, image)
 
-### 🌐 **Web Scraping & Analysis**
-- Advanced web scraping using Firecrawl API
-- Clean data extraction from any website
-- SEO analysis and content insights
-- Batch scraping capabilities (up to 5 URLs)
-- URL analysis with metadata extraction
+**Seamless TypeScript-to-Python execution** with built-in data science libraries and dynamic package management.
+
+#### **🚀 Key Features**
+
+- **Built-in Libraries**: pandas, numpy, matplotlib, seaborn, datetime
+- **Dynamic Package Installation**: Install any PyPI package on-demand
+- **Multiple Return Types**: Text, JSON, and image (matplotlib plots)
+- **TypeScript Integration**: Seamless data exchange between TS and Python
+
+
+
+### 🌐 **Web Scraping & Analysis Suite**
+
+**Advanced web scraping** powered by [Firecrawl API](https://firecrawl.dev) for clean, structured data extraction with SEO analysis capabilities.
+
+#### **🔧 Three Tools Available**
+
+- **Web Scraper**: Clean content extraction with main content filtering
+- **URL Analyzer**: SEO analysis, content structure, and meta tag validation
+- **Batch Scraper**: Multi-URL processing (up to 5 URLs simultaneously)
+
+
 
 ### 🔍 **Research Assistant**
-- Intelligent research capabilities for Swift/Kotlin documentation
-- Automatic source discovery and content analysis
-- Structured research results with relevance scoring
-- Swift.org and kotlinlang.org specialized research
 
-### ℹ️ **Server Information**
-- Real-time server status and tool availability
-- Performance metrics and system information
+**Intelligent research capabilities** for Swift/Kotlin documentation with automatic source discovery and relevance analysis.
 
-## Installation
+#### **🧠 Key Features**
 
-1. Install dependencies:
+- **Source Discovery**: Automatically finds relevant documentation from Swift.org and Kotlinlang.org
+- **Content Analysis**: Extracts key information and best practices
+- **Relevance Scoring**: Ranks results by relevance to your query
+- **Multi-language**: Supports both Swift and Kotlin research
+
+
+
+### ℹ️ **Server Information & Monitoring**
+
+**Real-time server status** and comprehensive tool availability monitoring.
+
+Provides real-time server status, tool availability, performance metrics, and system information.
+
+## 🚀 **Getting Started**
+
+### **📋 Prerequisites**
+
+- **Node.js** 18 or higher
+- **npm** or **pnpm** package manager
+- **OpenAI API Key** for AI agent functionality
+- **Firecrawl API Key** for web scraping features
+
+### **⚡ Quick Setup**
+
+1. **Clone and Install**:
 ```bash
+git clone https://github.com/aditi711/ab-mcp-server.git
+cd ab-mcp-server
 npm install
 ```
 
-2. Set up environment variables:
-Create a `.env.local` file and add your API keys:
+2. **Environment Configuration**:
+Create `.env.local` file:
 ```bash
-OPENAI_API_KEY=your-openai-api-key-here
-FIRECRAWL_API_KEY=your-firecrawl-api-key-here
+# Required for AI Agent functionality
+OPENAI_API_KEY=sk-proj-your-openai-api-key-here
+
+# Required for web scraping features  
+FIRECRAWL_API_KEY=fc-your-firecrawl-api-key-here
 ```
 
-Get your API keys:
+**Get your API keys:**
 - **OpenAI**: [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 - **Firecrawl**: [https://firecrawl.dev](https://firecrawl.dev)
 
-3. Run the development server:
+3. **Start Development Server**:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to see the server status page and try the AI agent web interface.
+4. **Access Web Interface**:
+Open [http://localhost:3000](http://localhost:3000) to see the server status page and AI agent chat interface.
 
-## Usage
+### **🔌 MCP Client Configuration**
 
-### Web Interface
-- Visit `http://localhost:3000` to access the AI agent chat interface directly in your browser
-- Configure model settings and system prompts through the web UI
-- No additional setup required - works immediately after starting the server
+The MCP server endpoint: `http://localhost:3000/api/sse`
 
-### MCP Endpoint
-The MCP server is available at: `http://localhost:3000/api/sse`
-
-## Client Configuration
-
-### Claude Desktop
-
-Add this to your Claude Desktop configuration file:
+#### **Claude Desktop**
 
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`  
 **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
@@ -146,28 +209,9 @@ Add this to your Claude Desktop configuration file:
 }
 ```
 
-### Cursor
+#### **Cursor**
 
-Add this to `~/.cursor/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "ab-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "-y",
-        "http://localhost:3000/api/sse"
-      ]
-    }
-  }
-}
-```
-
-### Windsurf
-
-Add this to `~/.codeium/windsurf/mcp_config.json`:
+Add to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -184,276 +228,341 @@ Add this to `~/.codeium/windsurf/mcp_config.json`:
 }
 ```
 
-## Available Tools
+#### **Windsurf**
 
-### 🤖 Agent Tool
-- **Name**: `agent`
-- **Description**: AI assistant powered by OpenAI GPT models that can help with various tasks
-- **Parameters**:
-  - `prompt` (string): The question or task for the AI agent
-  - `system_prompt` (string, optional): Optional system prompt to set the agent's behavior
-  - `model` (string, optional): OpenAI model to use (default: gpt-4o-mini)
+Add to `~/.codeium/windsurf/mcp_config.json`:
 
-**Features**:
-- Uses OpenAI's GPT models for intelligent responses
-- Customizable system prompts for different behaviors
-- Support for multiple OpenAI models (GPT-4o, GPT-4, GPT-3.5 Turbo, etc.)
-- Intelligent auto-detection of user intent and tool recommendations
-- Available both through MCP protocol and web interface
-
-**Client-side Web Interface Features**:
-- Real-time chat interface with message history
-- Model selection dropdown (GPT-4o, GPT-4, GPT-3.5 Turbo, etc.)
-- Custom system prompt configuration
-- Message timestamps and conversation management
-- Clear chat functionality
-- Responsive design
-
-### 📱 Swift Code Review Tool
-- **Name**: `swift_code_review`
-- **Description**: Comprehensive Swift iOS code review analyzing best practices, potential issues, memory management, and architecture patterns
-- **Parameters**:
-  - `code` (string): The Swift code to review
-  - `focus` (string, optional): Optional focus area ('performance', 'memory', 'security', or 'architecture')
-
-**Review Features**:
-- **Syntax & Style**: Line length, naming conventions, coding standards
-- **Memory Management**: Force unwrapping detection, retain cycle analysis, weak/strong reference patterns
-- **Threading**: DispatchQueue usage, async/await patterns, main thread safety
-- **iOS Patterns**: UIKit vs SwiftUI best practices, deprecated API detection
-- **SwiftUI Specific**: @State/@Binding/@ObservedObject usage, view composition
-- **Performance**: String interpolation vs concatenation, collection operations
-- **Security**: Keychain vs UserDefaults, HTTPS enforcement
-- **Clean Code**: Function length, meaningful names, magic numbers, documentation
-- **Clean Architecture**: MVVM patterns, Repository pattern, Dependency Injection
-- **SOLID Principles**: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
-
-**Focus Areas**:
-- **Performance**: Optimization suggestions, algorithmic improvements
-- **Memory**: Retain cycle detection, memory leak prevention
-- **Security**: Data storage, network security, authentication patterns
-- **Architecture**: Code organization, design patterns, testability
-
-### 🤖 Kotlin Code Review Tool
-- **Name**: `kotlin_code_review`
-- **Description**: Comprehensive Kotlin Android code review analyzing best practices, clean architecture, and modern Android development patterns
-- **Parameters**:
-  - `code` (string): The Kotlin code to review
-  - `focus` (string, optional): Optional focus area ('performance', 'memory', 'security', or 'architecture')
-
-**Review Features**:
-- **Syntax & Style**: Kotlin conventions, naming standards, code organization
-- **Null Safety**: Proper nullable handling, safe calls, elvis operator usage
-- **Coroutines**: Proper dispatcher usage, structured concurrency, flow patterns
-- **Android Patterns**: Activity/Fragment lifecycle, ViewBinding vs findViewById
-- **Architecture**: MVVM implementation, Repository pattern, Dependency Injection (Hilt/Dagger)
-- **Data Classes**: Proper data class usage vs regular classes
-- **Collections**: Efficient collection operations, immutability patterns
-- **Clean Code**: Function composition, meaningful names, magic numbers elimination
-- **Clean Architecture**: Layer separation, dependency rules, testability
-- **SOLID Principles**: Applied to Android/Kotlin context
-- **Performance**: Memory leaks, GlobalScope usage, efficient algorithms
-
-**Focus Areas**:
-- **Performance**: Coroutine optimization, memory efficiency
-- **Memory**: Leak detection, proper lifecycle management
-- **Security**: Data storage best practices, network security
-- **Architecture**: Clean Architecture patterns, testable code structure
-
-### 🐍 Python Integration Tool
-- **Name**: `python_exec`
-- **Description**: Execute Python code with seamless TypeScript-to-Python integration
-- **Parameters**:
-  - `code` (string): The Python code to execute
-  - `packages` (array, optional): Additional Python packages to install
-  - `return_type` (string, optional): Expected return type (text, json, image)
-
-**Built-in Packages**:
-- pandas (Data manipulation)
-- numpy (Numerical computing)
-- matplotlib (Plotting)
-- seaborn (Statistical visualization)
-- datetime (Date/time handling)
-
-**Features**:
-- Dynamic package installation
-- Support for data visualization with automatic image return
-- JSON and text output formatting
-- Error handling with detailed stack traces
-
-### 🌐 Web Scraping Tools (Firecrawl)
-
-#### Web Scraper
-- **Name**: `web_scraper`
-- **Description**: Scrape web content from any URL using Firecrawl for clean, structured data extraction
-- **Parameters**:
-  - `url` (string): The URL to scrape
-  - `onlyMainContent` (boolean, optional): Extract only main content (default: true)
-
-#### URL Analyzer
-- **Name**: `url_analyzer`
-- **Description**: Analyze a URL for SEO insights, content structure, and metadata
-- **Parameters**:
-  - `url` (string): The URL to analyze
-
-**Analysis Features**:
-- Title and meta description validation
-- Content structure analysis (headings, links, word count)
-- SEO insights (title length, description length)
-- Language detection and status code
-
-#### Batch Scraper
-- **Name**: `batch_scraper`
-- **Description**: Scrape multiple URLs at once (maximum 5 URLs) using Firecrawl
-- **Parameters**:
-  - `urls` (array): Array of URLs to scrape (max 5)
-  - `onlyMainContent` (boolean, optional): Extract only main content (default: true)
-
-**Features**:
-- Process up to 5 URLs simultaneously
-- Success/failure status for each URL
-- Content preview and metadata extraction
-- Efficient batch processing with error handling
-
-### 🔍 Research Assistant Tool
-- **Name**: `research_assistant`
-- **Description**: Intelligent research assistant for Swift/Kotlin documentation and best practices
-- **Parameters**:
-  - `query` (string): The research query or topic
-  - `language` (string, optional): Focus language ('swift' or 'kotlin', default: both)
-
-**Features**:
-- Automatic source discovery from Swift.org and kotlinlang.org
-- Content relevance analysis and scoring
-- Structured research results with citations
-- Best practices and documentation extraction
-- Multi-language research capabilities
-
-**Research Sources**:
-- Swift.org official documentation
-- Kotlinlang.org official documentation
-- Language-specific best practices guides
-- Architecture and design pattern documentation
-
-### ℹ️ Server Info Tool
-- **Name**: `server_info`
-- **Description**: Returns information about this MCP server and available tools
-- **Parameters**: None
-
-**Information Provided**:
-- Server version and status
-- Available tools list with descriptions
-- System performance metrics
-- API endpoint information
-
-## Testing
-
-### Test Files
-
-The repository includes comprehensive test files with intentional code issues to demonstrate the code review capabilities:
-
-#### 📱 `test_swift_broken.swift`
-A Swift test file containing various issues that the Swift code review tool can detect:
-
-- **Force unwrapping issues** (`!` and `!!`) without safety checks
-- **Retain cycles** with strong self references in closures
-- **Poor naming conventions** (userManager instead of UserManager)
-- **Threading issues** (UI updates on background thread)
-- **Magic numbers** and hardcoded values
-- **Poor error handling** with force try (`try!`)
-- **Memory leaks** (Timer with strong self reference)
-- **SOLID principle violations** (classes doing too many things)
-- **SwiftUI bad practices** (complex view body, expensive operations in view updates)
-- **Global variables** and missing documentation
-- **Clean Code violations** (long methods, unclear naming)
-
-#### 🤖 `test_kotlin_broken.kt`
-A Kotlin test file containing various Android/Kotlin-specific issues:
-
-- **Poor naming conventions** (userRepository instead of UserRepository)
-- **Null safety violations** (`null!!` and force unwrapping)
-- **SOLID principle violations** (UserManager handling multiple responsibilities)
-- **Poor Android practices** (findViewById instead of ViewBinding)
-- **Memory leaks** (static context references, GlobalScope usage)
-- **Poor coroutine usage** (wrong dispatchers, Thread.sleep in suspend functions)
-- **Architecture issues** (not using data classes, poor ViewModel implementation)
-- **Poor singleton implementation** (not thread-safe)
-- **Magic numbers** and hardcoded strings
-- **Poor exception handling** (generic catch-all blocks)
-- **Clean Code violations** (long methods, unclear responsibilities)
-
-### How to Test
-
-1. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-2. **Test Swift Code Review:**
-   ```bash
-   curl -X POST http://localhost:3000/api/sse \
-     -H "Content-Type: application/json" \
-     -d '{"method": "tools/call", "params": {"name": "swift_code_review", "arguments": {"code": "'"$(cat test_swift_broken.swift)"'"}}}'
-   ```
-
-3. **Test Kotlin Code Review:**
-   ```bash
-   curl -X POST http://localhost:3000/api/sse \
-     -H "Content-Type: application/json" \
-     -d '{"method": "tools/call", "params": {"name": "kotlin_code_review", "arguments": {"code": "'"$(cat test_kotlin_broken.kt)"'"}}}'
-   ```
-
-4. **Test via Web Interface:**
-   - Navigate to `http://localhost:3000`
-   - Use the AI agent chat interface
-   - Paste code snippets for review
-   - The agent will automatically detect code patterns and suggest appropriate tools
-
-### Expected Results
-
-Both tools should detect and report the various issues with:
-- **Detailed explanations** of each problem
-- **Specific suggestions** for improvement
-- **Best practice recommendations**
-- **Clean Code and Clean Architecture guidance**
-- **SOLID principles analysis**
-- **Performance and security considerations**
-
-## Development
-
-### Project Structure
-```
-ab-mcp-server/
-├── app/
-│   ├── api/
-│   │   ├── agent/
-│   │   │   └── route.ts          # Client-side agent API
-│   │   ├── tools/
-│   │   │   ├── agent.ts          # AI agent tool implementation
-│   │   │   ├── index.ts          # Tool exports and type definitions
-│   │   │   ├── kotlin.ts         # Kotlin code review tool
-│   │   │   ├── python.ts         # Python execution tool
-│   │   │   ├── server.ts         # Server info tool
-│   │   │   ├── swift.ts          # Swift code review tool
-│   │   │   └── web-scraping.ts   # Web scraping and research tools
-│   │   └── [transport]/
-│   │       └── route.ts          # MCP server implementation
-│   ├── components/
-│   │   └── AgentChat.tsx         # Client-side chat component
-│   ├── globals.css               # Global styles
-│   ├── layout.tsx                # App layout
-│   └── page.tsx                  # Home page with agent interface
-├── test_kotlin_broken.kt         # Kotlin test file with issues
-├── test_swift_broken.swift       # Swift test file with issues
-├── next.config.js
-├── package.json
-├── tsconfig.json
-└── README.md
+```json
+{
+  "mcpServers": {
+    "ab-mcp-server": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "-y",
+        "http://localhost:3000/api/sse"
+      ]
+    }
+  }
+}
 ```
 
-### Tool Architecture
+## 🧪 **Testing & Development**
+
+### **🔧 MCP Server Testing**
+
+**Basic Connectivity:**
+```bash
+# Test server health
+curl -X GET http://localhost:3000/api/sse
+
+# List all available tools
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/list","id":1}'
+
+# Test server info tool
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"server_info","arguments":{}},"id":1}'
 ```
-MCP Server Tools:
+
+**Production Server Testing:**
+```bash
+# Test deployed server
+curl -X POST https://ab-mcp.vercel.app/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/list","id":1}'
+```
+
+### **📱 Swift Code Review Testing**
+
+**Test with broken Swift code:**
+```bash
+# Test Swift code review tool
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"swift_code_review","arguments":{"code":"'"$(cat test_swift_broken.swift)"'"}},"id":1}'
+```
+
+**Expected detections:**
+- Force unwrapping without safety checks
+- Retain cycles in closures
+- UI updates on background threads
+- Poor naming conventions
+- Magic numbers and hardcoded values
+- SOLID principle violations
+
+### **🤖 Kotlin Code Review Testing**
+
+**Test with broken Kotlin code:**
+```bash
+# Test Kotlin code review tool
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"kotlin_code_review","arguments":{"code":"'"$(cat test_kotlin_broken.kt)"'"}},"id":1}'
+```
+
+**Expected detections:**
+- Null safety violations
+- Poor coroutine usage with GlobalScope
+- Memory leaks and context references
+- Architecture pattern violations
+- Threading and lifecycle issues
+
+### **🐍 Python Integration Testing**
+
+**Data Analysis Example:**
+```bash
+# Test Python execution with data science
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"python_exec",
+      "arguments":{
+        "code":"import pandas as pd; import numpy as np; data = pd.DataFrame({\"x\": np.random.randn(100), \"y\": np.random.randn(100)}); print(data.describe())",
+        "return_type":"text"
+      }
+    },
+    "id":1
+  }'
+```
+
+**Visualization Example:**
+```bash
+# Test matplotlib plotting
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"python_exec",
+      "arguments":{
+        "code":"import matplotlib.pyplot as plt; import numpy as np; x = np.linspace(0, 10, 100); y = np.sin(x); plt.plot(x, y); plt.title(\"Sine Wave\"); plt.savefig(\"plot.png\")",
+        "return_type":"image"
+      }
+    },
+    "id":1
+  }'
+```
+
+### **🌐 Web Scraping Testing**
+
+**Single URL Scraping:**
+```bash
+# Test web scraper
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"web_scraper",
+      "arguments":{
+        "url":"https://example.com",
+        "onlyMainContent":true
+      }
+    },
+    "id":1
+  }'
+```
+
+**SEO Analysis:**
+```bash
+# Test URL analyzer
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"url_analyzer",
+      "arguments":{
+        "url":"https://example.com"
+      }
+    },
+    "id":1
+  }'
+```
+
+**Batch Scraping:**
+```bash
+# Test batch scraper
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"batch_scraper",
+      "arguments":{
+        "urls":["https://example.com", "https://httpbin.org/json"],
+        "onlyMainContent":true
+      }
+    },
+    "id":1
+  }'
+```
+
+### **🔍 Research Assistant Testing**
+
+**Swift Research:**
+```bash
+# Test Swift documentation research
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"research_assistant",
+      "arguments":{
+        "query":"Swift async await best practices",
+        "language":"swift"
+      }
+    },
+    "id":1
+  }'
+```
+
+**Kotlin Research:**
+```bash
+# Test Kotlin documentation research
+curl -X POST http://localhost:3000/api/sse \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"tools/call",
+    "params":{
+      "name":"research_assistant",
+      "arguments":{
+        "query":"Kotlin coroutines lifecycle management",
+        "language":"kotlin"
+      }
+    },
+    "id":1
+  }'
+```
+
+### **🤖 AI Agent Testing**
+
+**Interactive Web Interface:**
+1. Navigate to `http://localhost:3000`
+2. Use the chat interface to test natural language queries
+3. Try queries like:
+   - *"Review this Swift code for issues"*
+   - *"Analyze this Python data and create a visualization"*
+   - *"Scrape this website and summarize the content"*
+
+**MCP Client Testing:**
+- Use the agent through Cursor, Claude Desktop, or Windsurf
+- Test auto-detection of user intent
+- Verify tool recommendations and execution
+
+## 📊 **Sample Test Files**
+
+### **📱 `test_swift_broken.swift`**
+A comprehensive Swift test file with **intentional issues** for code review demonstration:
+
+```swift
+// Multiple issues for testing Swift code review
+class UserManager {
+    var users: [User]! = nil  // ❌ Force unwrapping
+    static let shared = UserManager()  // ❌ Singleton without thread safety
+    
+    func loadUsers() {
+        DispatchQueue.global().async {
+            // Data loading...
+            self.updateUI()  // ❌ UI update on background thread
+        }
+    }
+    
+    func saveUser(_ user: User) {
+        try! realm.write {  // ❌ Force try
+            realm.add(user)
+        }
+    }
+}
+```
+
+**Issues detected:**
+- **Memory**: Force unwrapping, retain cycles
+- **Threading**: UI updates on background thread
+- **Error Handling**: Force try without proper error management
+- **Architecture**: Single responsibility principle violations
+- **Performance**: Inefficient algorithms and string operations
+
+### **🤖 `test_kotlin_broken.kt`**
+A comprehensive Kotlin test file with **Android-specific issues**:
+
+```kotlin
+// Multiple issues for testing Kotlin code review
+class UserRepository {
+    companion object {
+        var instance: UserRepository? = null  // ❌ Not thread-safe singleton
+    }
+    
+    fun getUsers(): List<User>? {
+        return null!!  // ❌ Null safety violation
+    }
+    
+    fun saveUser(user: User) {
+        GlobalScope.launch {  // ❌ Poor coroutine scope usage
+            Thread.sleep(1000)  // ❌ Blocking call in coroutine
+            // Save logic
+        }
+    }
+}
+```
+
+**Issues detected:**
+- **Null Safety**: Dangerous null handling patterns
+- **Concurrency**: GlobalScope usage, blocking calls in coroutines
+- **Memory**: Context leaks, static references
+- **Architecture**: MVVM pattern violations, poor separation of concerns
+- **Android**: findViewById usage instead of ViewBinding
+
+## 📁 **Project Architecture**
+
+```
+ab-mcp-server/                     # 🏠 Project root
+├── app/                           # 🌐 Next.js application  
+│   ├── api/                       # API routes
+│   │   ├── [transport]/          # 🔧 MCP protocol handler
+│   │   │   └── route.ts          # Main MCP server implementation
+│   │   ├── agent/                # 🤖 Client-side agent API
+│   │   │   └── route.ts          # Web interface agent endpoint
+│   │   └── tools/                # 🛠️ MCP Tools implementation
+│   │       ├── agent.ts          # AI agent tool
+│   │       ├── index.ts          # Tool exports and type definitions
+│   │       ├── kotlin.ts         # Kotlin code review tool
+│   │       ├── python.ts         # Python execution tool
+│   │       ├── server.ts         # Server info tool
+│   │       ├── swift.ts          # Swift code review tool
+│   │       └── web-scraping.ts   # Web scraping and research tools
+│   ├── components/               # 🎨 React components
+│   │   └── AgentChat.tsx         # Client-side chat interface
+│   ├── globals.css               # 🎨 Global styles
+│   ├── layout.tsx                # 📱 App layout
+│   └── page.tsx                  # 🏠 Home page with agent interface
+├── test_swift_broken.swift       # 📱 Swift test file with issues
+├── test_kotlin_broken.kt         # 🤖 Kotlin test file with issues
+├── SECURITY.md                   # 🔒 Security guidelines and best practices
+├── next.config.js                # ⚙️ Next.js configuration
+├── package.json                  # 📦 Dependencies & scripts
+├── tsconfig.json                 # 📝 TypeScript configuration
+├── vercel.json                   # 🚀 Deployment configuration
+└── README.md                     # 📖 Documentation
+```
+
+### **🛠️ Tool Architecture**
+
+```
+MCP Server Tools (9 total):
 ├── 🤖 agent                    # AI assistant with auto-detection
 ├── 📱 swift_code_review        # Swift iOS code analysis
 ├── 🤖 kotlin_code_review       # Kotlin Android code analysis
@@ -465,30 +574,122 @@ MCP Server Tools:
 └── ℹ️ server_info             # Server status and information
 ```
 
-### Built With
+### **🔄 Data Flow**
 
-**Core Framework:**
-- [Next.js 14](https://nextjs.org/) - React framework with App Router
-- [TypeScript](https://www.typescriptlang.org/) - Type safety and development experience
-- [@vercel/mcp-adapter](https://github.com/vercel/mcp-adapter) - MCP adapter for Next.js
+```
+Client Request → MCP Protocol → Tool Router → Specific Tool → External API → Response Processing → Client Response
+```
 
-**AI & APIs:**
-- [OpenAI GPT Models](https://openai.com/) - AI agent and intelligent assistance
-- [Firecrawl](https://firecrawl.dev/) - Advanced web scraping and data extraction
-- [Python Runtime](https://www.python.org/) - Code execution with pandas, numpy, matplotlib, seaborn
+1. **Client Request**: MCP client sends request via SSE or HTTP
+2. **MCP Protocol**: Request validated and routed through @vercel/mcp-adapter
+3. **Tool Router**: Request dispatched to appropriate tool based on method name
+4. **Tool Execution**: Tool processes request with external APIs if needed
+5. **Response Processing**: Results formatted and validated
+6. **Client Response**: Structured response sent back to MCP client
 
-**Development Tools:**
-- [Zod](https://zod.dev/) - TypeScript-first schema validation
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [React](https://react.dev/) - UI component library
+## 🔮 **Future Development Roadmap**
 
-**Languages & Analysis:**
-- [Swift](https://swift.org/) - iOS development language for code review analysis
-- [Kotlin](https://kotlinlang.org/) - Android development language for code review analysis
-- Clean Code & Clean Architecture principles integration
-- SOLID principles validation and analysis
+### **🎯 Planned Features (Not Yet Implemented)**
 
-**Protocols & Standards:**
-- [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) - Standardized AI tool integration
-- RESTful API design for web interface
-- Server-Sent Events (SSE) for real-time communication
+#### **🧠 Enhanced AI Capabilities**
+
+- **Memory Persistence**: Conversation context across sessions
+- **Multi-step Workflows**: Complex analysis with dependencies
+- **Custom Agents**: Domain-specific expertise modules
+- **Code Generation**: AI-powered code scaffolding and templates
+
+#### **📊 Advanced Code Analysis**
+
+- **Static Analysis Integration**: ESLint, SwiftLint, ktlint integration
+- **Performance Profiling**: Runtime analysis and optimization suggestions
+- **Security Scanning**: Vulnerability detection and remediation
+- **Dependency Analysis**: Package security and update recommendations
+
+#### **🌐 Enhanced Web Capabilities**
+
+- **Real-time Monitoring**: Website change detection and alerts
+- **API Testing**: Automated API endpoint testing and validation
+- **Performance Auditing**: Core Web Vitals and accessibility scoring
+- **Content Management**: Automated content extraction and organization
+
+#### **🐍 Advanced Python Features**
+
+- **Jupyter Integration**: Notebook-style execution and visualization
+- **Machine Learning**: scikit-learn, TensorFlow, PyTorch integration
+- **Database Connectivity**: PostgreSQL, MongoDB, Redis connections
+- **Async Processing**: Background task execution and queuing
+
+#### **📱 Mobile Development Tools**
+
+- **React Native**: Cross-platform code review and analysis
+- **Flutter/Dart**: Dart code review and optimization suggestions
+- **CI/CD Integration**: GitHub Actions, Bitrise, Fastlane automation
+- **App Store Optimization**: ASO analysis and recommendations
+
+#### **🔧 Developer Experience**
+
+- **IDE Extensions**: VS Code, Xcode, Android Studio plugins
+- **CLI Interface**: Command-line tool for local development
+- **Custom Templates**: Project scaffolding and boilerplate generation
+- **Documentation**: Auto-generated API docs and code documentation
+
+### **🚀 Contributing**
+
+This project is **open for contributions**! Priority areas:
+
+1. **Enhanced AI Agents**: Memory persistence, multi-step workflows
+2. **Mobile Development**: React Native, Flutter integration  
+3. **Performance**: Caching, optimization, concurrent processing
+4. **Security**: Enhanced code scanning, vulnerability detection
+5. **Documentation**: Comprehensive guides, video tutorials
+
+**How to contribute:**
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new functionality
+4. Submit a pull request with detailed description
+
+## 🏗️ **Built With**
+
+### **🚀 Core Framework**
+- **[Next.js 14](https://nextjs.org/)** - React framework with App Router
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety and development experience
+- **[@vercel/mcp-adapter](https://github.com/vercel/mcp-adapter)** - MCP adapter for Next.js
+
+### **🤖 AI & APIs**
+- **[OpenAI GPT Models](https://openai.com/)** - AI agent and intelligent assistance
+- **[Firecrawl](https://firecrawl.dev/)** - Advanced web scraping and data extraction
+- **[Python Runtime](https://www.python.org/)** - Code execution with pandas, numpy, matplotlib, seaborn
+
+### **🛠️ Development Tools**
+- **[Zod](https://zod.dev/)** - TypeScript-first schema validation
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[React](https://react.dev/)** - UI component library
+
+### **📱 Languages & Analysis**
+- **[Swift](https://swift.org/)** - iOS development language for code review analysis
+- **[Kotlin](https://kotlinlang.org/)** - Android development language for code review analysis
+- **Clean Code & Clean Architecture** - Software engineering principles integration
+- **SOLID Principles** - Design pattern validation and analysis
+
+### **🌐 Protocols & Standards**
+- **[Model Context Protocol (MCP)](https://github.com/modelcontextprotocol)** - Standardized AI tool integration
+- **RESTful API** - Web interface and client communication
+- **Server-Sent Events (SSE)** - Real-time communication protocol
+
+### **🔗 Links**
+- **🌐 Live Demo**: [https://ab-mcp.vercel.app](https://ab-mcp.vercel.app)
+- **📂 Repository**: [https://github.com/aditi711/ab-mcp-server](https://github.com/aditi711/ab-mcp-server)
+- **🔒 Security**: See [SECURITY.md](SECURITY.md) for security guidelines
+- **📖 MCP Protocol**: [Model Context Protocol Documentation](https://github.com/modelcontextprotocol)
+
+### **💬 Support**
+- **Issues**: [GitHub Issues](https://github.com/aditi711/ab-mcp-server/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/aditi711/ab-mcp-server/discussions)
+- **Documentation**: Comprehensive guides and examples in this README
+
+---
+
+**Built with ❤️ using TypeScript, Next.js, OpenAI, Python, and the Model Context Protocol.**
+
+🚀 **Ready for production deployment and continuous enhancement!**
