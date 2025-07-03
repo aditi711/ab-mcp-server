@@ -9,10 +9,6 @@
       "memory": 512
     }
   },
-  "env": {
-    "OPENAI_API_KEY": "@openai-api-key",
-    "FIRECRAWL_API_KEY": "@firecrawl-api-key"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
