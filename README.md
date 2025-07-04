@@ -209,19 +209,13 @@ The MCP server endpoint: `http://localhost:3000/api/sse`
 
 #### **Cursor**
 
-Add to `~/.cursor/mcp.json`:
+**Method 1: One-Click Integration (Recommended)**
+Use the "🚀 Add to Cursor" button on [https://ab-mcp.vercel.app](https://ab-mcp.vercel.app) for direct integration.
 
-```json
-{
-  "mcpServers": {
-    "ab-mcp-server": {
-      "transport": {
-        "type": "sse",
-        "url": "http://localhost:3000/api/sse"
-      }
-    }
-  }
-}
+**Method 2: Terminal Command**
+```bash
+# Direct installation using mcp-remote
+npx mcp-remote add http://localhost:3000/api/sse --name ab-mcp-server --type sse
 ```
 
 #### **Windsurf**

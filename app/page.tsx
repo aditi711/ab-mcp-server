@@ -3,75 +3,26 @@
 import React from 'react';
 
 export default function Home() {
-  const handleAddToCursor = async () => {
-    const newServer = {
-      transport: {
-        type: "sse",
-        url: "https://ab-mcp.vercel.app/api/sse"
-      }
-    };
-
-    // Create a complete configuration that can be merged with existing ones
-    const config = {
-      mcpServers: {
-        "ab-mcp-server": newServer
-      }
-    };
-
-    // Create configuration with helpful comments
-    const configWithComments = `{
-  "_comment": "AB MCP Server Configuration - Move this file to ~/.cursor/mcp.json",
-  "_instructions": "If you already have mcp.json, just add the ab-mcp-server entry to your existing mcpServers section",
-  "mcpServers": {
-    "ab-mcp-server": ${JSON.stringify(newServer, null, 6).replace(/^/gm, '    ')}
-  }
-}`;
-
-    const configString = JSON.stringify(config, null, 2);
-
-    try {
-      // Try to use File System Access API (modern browsers)
-      if ('showSaveFilePicker' in window) {
-        const fileHandle = await (window as any).showSaveFilePicker({
-          suggestedName: 'mcp.json',
-          types: [{
-            description: 'JSON files',
-            accept: { 'application/json': ['.json'] }
-          }]
-        });
-        
-        const writable = await fileHandle.createWritable();
-        await writable.write(configWithComments);
-        await writable.close();
-        
-        alert('✅ MCP configuration saved successfully!\n\n📁 File saved as mcp.json\n\n🔧 Next steps:\n1. Move to ~/.cursor/mcp.json (or merge with existing file)\n2. Restart Cursor to connect\n\n🚀 You now have direct access to 9 powerful MCP tools!');
-        return;
-      }
-    } catch (err) {
-      // User cancelled or other error, fall back to download
-    }
-
-    try {
-      // Fallback: Download the file
-      const blob = new Blob([configWithComments], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'mcp.json';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      
-      alert('✅ MCP configuration downloaded!\n\n📁 File: mcp.json downloaded to your Downloads folder\n\n🔧 Next steps:\n1. Move mcp.json to ~/.cursor/mcp.json (or merge with existing file)\n2. Restart Cursor to connect\n\n🚀 Direct SSE connection configured - you now have access to 9 powerful MCP tools!\n\n💡 Tip: If you already have mcp.json, just add the ab-mcp-server entry to your existing mcpServers section.');
-    } catch (err) {
-      // Final fallback: Copy to clipboard
-      navigator.clipboard.writeText(configString).then(() => {
-        alert('✅ MCP configuration copied to clipboard!\n\n📁 Next steps:\n1. Create ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 Direct SSE connection configured!');
-      }).catch(() => {
-        alert('❌ Auto-configuration failed. Please manually create ~/.cursor/mcp.json with:\n\n' + configString);
-      });
-    }
+  const handleAddToCursor = () => {
+    // Try Cursor deeplink first
+    const deeplink = `cursor://mcp/add?url=${encodeURIComponent('https://ab-mcp.vercel.app/api/sse')}&name=ab-mcp-server&type=sse`;
+    const command = `npx mcp-remote add https://ab-mcp.vercel.app/api/sse --name ab-mcp-server --type sse`;
+    
+    // Attempt to open Cursor deeplink
+    window.location.href = deeplink;
+    
+    // Copy fallback command and show instructions
+    navigator.clipboard.writeText(command).then(() => {
+      // Show success message with both methods
+      setTimeout(() => {
+        alert('🚀 Attempting to add AB MCP Server directly to Cursor...\n\n✨ If Cursor opened automatically - great! The server should be added to your MCP tools.\n\n📋 Fallback: If the direct link didn\'t work, run this command:\n\n' + command + '\n\nThen restart Cursor to access all 9 MCP tools!');
+      }, 500);
+    }).catch(() => {
+      // Fallback if clipboard fails
+      setTimeout(() => {
+        alert('🚀 Attempting to open Cursor directly...\n\n📋 If that didn\'t work, manually run:\n\n' + command + '\n\n✨ This will add AB MCP Server to Cursor\'s tools & integrations!');
+      }, 500);
+    });
   };
 
   const handleViewGitHub = () => {
@@ -290,7 +241,7 @@ export default function Home() {
               target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
             }}
           >
-            🔌 Install to Cursor
+🚀 Add to Cursor
           </button>
           <button 
             onClick={handleViewGitHub}
