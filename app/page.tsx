@@ -7,20 +7,18 @@ export default function Home() {
     const config = `{
   "mcpServers": {
     "ab-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "-y",
-        "https://ab-mcp.vercel.app/api/sse"
-      ]
+      "transport": {
+        "type": "sse",
+        "url": "https://ab-mcp.vercel.app/api/sse"
+      }
     }
   }
 }`;
     
     navigator.clipboard.writeText(config).then(() => {
-      alert('✅ AB MCP Server configuration copied to clipboard!\n\n📁 Next steps:\n1. Open ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 You now have access to 9 powerful MCP tools including AI agent, code review, Python execution, and web scraping!');
+      alert('✅ AB MCP Server configuration copied to clipboard!\n\n📁 Next steps:\n1. Open ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 Direct SSE connection configured - you now have access to 9 powerful MCP tools including AI agent, code review, Python execution, and web scraping!');
     }).catch(() => {
-      alert('❌ Copy failed. Please manually copy this MCP configuration:\n\n' + config + '\n\n📁 Add this to your ~/.cursor/mcp.json file to enable AB MCP Server integration.');
+      alert('❌ Copy failed. Please manually copy this MCP configuration:\n\n' + config + '\n\n📁 Add this to your ~/.cursor/mcp.json file to enable direct SSE connection to AB MCP Server.');
     });
   };
 

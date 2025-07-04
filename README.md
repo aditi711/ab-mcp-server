@@ -198,12 +198,10 @@ The MCP server endpoint: `http://localhost:3000/api/sse`
 {
   "mcpServers": {
     "ab-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "-y",
-        "http://localhost:3000/api/sse"
-      ]
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:3000/api/sse"
+      }
     }
   }
 }
@@ -217,12 +215,10 @@ Add to `~/.cursor/mcp.json`:
 {
   "mcpServers": {
     "ab-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "-y",
-        "http://localhost:3000/api/sse"
-      ]
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:3000/api/sse"
+      }
     }
   }
 }
@@ -236,12 +232,10 @@ Add to `~/.codeium/windsurf/mcp_config.json`:
 {
   "mcpServers": {
     "ab-mcp-server": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "-y",
-        "http://localhost:3000/api/sse"
-      ]
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:3000/api/sse"
+      }
     }
   }
 }
@@ -574,19 +568,6 @@ MCP Server Tools (9 total):
 └── ℹ️ server_info             # Server status and information
 ```
 
-### **🔄 Data Flow**
-
-```
-Client Request → MCP Protocol → Tool Router → Specific Tool → External API → Response Processing → Client Response
-```
-
-1. **Client Request**: MCP client sends request via SSE or HTTP
-2. **MCP Protocol**: Request validated and routed through @vercel/mcp-adapter
-3. **Tool Router**: Request dispatched to appropriate tool based on method name
-4. **Tool Execution**: Tool processes request with external APIs if needed
-5. **Response Processing**: Results formatted and validated
-6. **Client Response**: Structured response sent back to MCP client
-
 ## 🔮 **Future Development Roadmap**
 
 ### **🎯 Planned Features (Not Yet Implemented)**
@@ -648,45 +629,6 @@ This project is **open for contributions**! Priority areas:
 2. Create a feature branch
 3. Add tests for new functionality
 4. Submit a pull request with detailed description
-
-## 🏗️ **Built With**
-
-### **🚀 Core Framework**
-- **[Next.js 14](https://nextjs.org/)** - React framework with App Router
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety and development experience
-- **[@vercel/mcp-adapter](https://github.com/vercel/mcp-adapter)** - MCP adapter for Next.js
-
-### **🤖 AI & APIs**
-- **[OpenAI GPT Models](https://openai.com/)** - AI agent and intelligent assistance
-- **[Firecrawl](https://firecrawl.dev/)** - Advanced web scraping and data extraction
-- **[Python Runtime](https://www.python.org/)** - Code execution with pandas, numpy, matplotlib, seaborn
-
-### **🛠️ Development Tools**
-- **[Zod](https://zod.dev/)** - TypeScript-first schema validation
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[React](https://react.dev/)** - UI component library
-
-### **📱 Languages & Analysis**
-- **[Swift](https://swift.org/)** - iOS development language for code review analysis
-- **[Kotlin](https://kotlinlang.org/)** - Android development language for code review analysis
-- **Clean Code & Clean Architecture** - Software engineering principles integration
-- **SOLID Principles** - Design pattern validation and analysis
-
-### **🌐 Protocols & Standards**
-- **[Model Context Protocol (MCP)](https://github.com/modelcontextprotocol)** - Standardized AI tool integration
-- **RESTful API** - Web interface and client communication
-- **Server-Sent Events (SSE)** - Real-time communication protocol
-
-### **🔗 Links**
-- **🌐 Live Demo**: [https://ab-mcp.vercel.app](https://ab-mcp.vercel.app)
-- **📂 Repository**: [https://github.com/aditi711/ab-mcp-server](https://github.com/aditi711/ab-mcp-server)
-- **🔒 Security**: See [SECURITY.md](SECURITY.md) for security guidelines
-- **📖 MCP Protocol**: [Model Context Protocol Documentation](https://github.com/modelcontextprotocol)
-
-### **💬 Support**
-- **Issues**: [GitHub Issues](https://github.com/aditi711/ab-mcp-server/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/aditi711/ab-mcp-server/discussions)
-- **Documentation**: Comprehensive guides and examples in this README
 
 ---
 
