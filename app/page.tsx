@@ -3,23 +3,75 @@
 import React from 'react';
 
 export default function Home() {
-  const handleAddToCursor = () => {
-    const config = `{
-  "mcpServers": {
-    "ab-mcp-server": {
-      "transport": {
-        "type": "sse",
-        "url": "https://ab-mcp.vercel.app/api/sse"
+  const handleAddToCursor = async () => {
+    const newServer = {
+      transport: {
+        type: "sse",
+        url: "https://ab-mcp.vercel.app/api/sse"
       }
-    }
+    };
+
+    // Create a complete configuration that can be merged with existing ones
+    const config = {
+      mcpServers: {
+        "ab-mcp-server": newServer
+      }
+    };
+
+    // Create configuration with helpful comments
+    const configWithComments = `{
+  "_comment": "AB MCP Server Configuration - Move this file to ~/.cursor/mcp.json",
+  "_instructions": "If you already have mcp.json, just add the ab-mcp-server entry to your existing mcpServers section",
+  "mcpServers": {
+    "ab-mcp-server": ${JSON.stringify(newServer, null, 6).replace(/^/gm, '    ')}
   }
 }`;
-    
-    navigator.clipboard.writeText(config).then(() => {
-      alert('✅ AB MCP Server configuration copied to clipboard!\n\n📁 Next steps:\n1. Open ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 Direct SSE connection configured - you now have access to 9 powerful MCP tools including AI agent, code review, Python execution, and web scraping!');
-    }).catch(() => {
-      alert('❌ Copy failed. Please manually copy this MCP configuration:\n\n' + config + '\n\n📁 Add this to your ~/.cursor/mcp.json file to enable direct SSE connection to AB MCP Server.');
-    });
+
+    const configString = JSON.stringify(config, null, 2);
+
+    try {
+      // Try to use File System Access API (modern browsers)
+      if ('showSaveFilePicker' in window) {
+        const fileHandle = await (window as any).showSaveFilePicker({
+          suggestedName: 'mcp.json',
+          types: [{
+            description: 'JSON files',
+            accept: { 'application/json': ['.json'] }
+          }]
+        });
+        
+        const writable = await fileHandle.createWritable();
+        await writable.write(configWithComments);
+        await writable.close();
+        
+        alert('✅ MCP configuration saved successfully!\n\n📁 File saved as mcp.json\n\n🔧 Next steps:\n1. Move to ~/.cursor/mcp.json (or merge with existing file)\n2. Restart Cursor to connect\n\n🚀 You now have direct access to 9 powerful MCP tools!');
+        return;
+      }
+    } catch (err) {
+      // User cancelled or other error, fall back to download
+    }
+
+    try {
+      // Fallback: Download the file
+      const blob = new Blob([configWithComments], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'mcp.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      alert('✅ MCP configuration downloaded!\n\n📁 File: mcp.json downloaded to your Downloads folder\n\n🔧 Next steps:\n1. Move mcp.json to ~/.cursor/mcp.json (or merge with existing file)\n2. Restart Cursor to connect\n\n🚀 Direct SSE connection configured - you now have access to 9 powerful MCP tools!\n\n💡 Tip: If you already have mcp.json, just add the ab-mcp-server entry to your existing mcpServers section.');
+    } catch (err) {
+      // Final fallback: Copy to clipboard
+      navigator.clipboard.writeText(configString).then(() => {
+        alert('✅ MCP configuration copied to clipboard!\n\n📁 Next steps:\n1. Create ~/.cursor/mcp.json\n2. Paste the configuration\n3. Restart Cursor to connect\n\n🔧 Direct SSE connection configured!');
+      }).catch(() => {
+        alert('❌ Auto-configuration failed. Please manually create ~/.cursor/mcp.json with:\n\n' + configString);
+      });
+    }
   };
 
   const handleViewGitHub = () => {
@@ -238,7 +290,7 @@ export default function Home() {
               target.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
             }}
           >
-            🔌 Add to Cursor
+            🔌 Install to Cursor
           </button>
           <button 
             onClick={handleViewGitHub}
